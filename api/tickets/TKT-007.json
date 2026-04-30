@@ -1,0 +1,24 @@
+{
+  "id": "TKT-007",
+  "title": "Filtro de data não considera fuso horário corretamente",
+  "user": "rodrigo.lima@empresa.com",
+  "status": "open",
+  "priority": "medium",
+  "created_at": "2025-04-06T08:00:00Z",
+  "updated_at": "2025-04-06T08:00:00Z",
+  "description": "Ao filtrar registros por data, o sistema não considera o fuso horário do usuário. Usuários em Brasília (UTC-3) veem registros de um dia anterior ou posterior ao esperado. O problema é mais crítico em horários próximos à meia-noite.",
+  "tags": [
+    "timezone",
+    "filter",
+    "date"
+  ],
+  "assignee": null,
+  "history": [
+    {
+      "id": "h18",
+      "action": "Chamado aberto",
+      "user": "rodrigo.lima@empresa.com",
+      "timestamp": "2025-04-06T08:00:00Z"
+    }
+  ]
+}

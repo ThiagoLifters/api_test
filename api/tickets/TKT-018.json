@@ -1,0 +1,24 @@
+{
+  "id": "TKT-018",
+  "title": "Campo de busca ignorando acentuação",
+  "user": "monica.duarte@empresa.com",
+  "status": "open",
+  "priority": "low",
+  "created_at": "2025-04-08T11:00:00Z",
+  "updated_at": "2025-04-08T11:00:00Z",
+  "description": "A busca por nome de produto não funciona ao digitar palavras com acento. Exemplo: buscar 'camisão' não retorna resultados, mas 'camisao' funciona. O problema afeta toda a busca textual do sistema.",
+  "tags": [
+    "search",
+    "encoding",
+    "i18n"
+  ],
+  "assignee": null,
+  "history": [
+    {
+      "id": "h35",
+      "action": "Chamado aberto",
+      "user": "monica.duarte@empresa.com",
+      "timestamp": "2025-04-08T11:00:00Z"
+    }
+  ]
+}

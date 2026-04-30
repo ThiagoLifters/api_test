@@ -1,0 +1,30 @@
+{
+  "id": "TKT-011",
+  "title": "Impressão de boletos cortando margem direita",
+  "user": "ana.beatriz@empresa.com",
+  "status": "in_progress",
+  "priority": "high",
+  "created_at": "2025-04-06T15:00:00Z",
+  "updated_at": "2025-04-07T09:00:00Z",
+  "description": "Ao imprimir boletos pelo sistema, a margem direita é cortada em cerca de 2cm. O problema ocorre em impressoras HP e Epson testadas. Boletos gerados em PDF e abertos externamente imprimem corretamente.",
+  "tags": [
+    "print",
+    "boleto",
+    "layout"
+  ],
+  "assignee": "silvia.andrade@empresa.com",
+  "history": [
+    {
+      "id": "h24",
+      "action": "Chamado aberto",
+      "user": "ana.beatriz@empresa.com",
+      "timestamp": "2025-04-06T15:00:00Z"
+    },
+    {
+      "id": "h25",
+      "action": "Status alterado para: em andamento",
+      "user": "silvia.andrade@empresa.com",
+      "timestamp": "2025-04-07T09:00:00Z"
+    }
+  ]
+}

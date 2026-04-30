@@ -8,7 +8,7 @@
 ## Base URL
 
 ```
-https://ThiagoLifters.github.io/api_test
+https://SEU_USUARIO.github.io/tickets-mock-api
 ```
 
 > **Nota:** substitua pela URL real informada pelo avaliador.
@@ -24,7 +24,7 @@ Retorna a lista completa de chamados.
 **Exemplo de requisição:**
 
 ```js
-const response = await fetch('https://ThiagoLifters.github.io/api_test/api/tickets.json')
+const response = await fetch('https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets.json')
 const { data, total } = await response.json()
 ```
 
@@ -58,7 +58,7 @@ Retorna os dados completos de um chamado, incluindo o histórico.
 **Exemplo de requisição:**
 
 ```js
-const response = await fetch('https://ThiagoLifters.github.io/api_test/api/tickets/TKT-001.json')
+const response = await fetch('https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets/TKT-001.json')
 const ticket = await response.json()
 ```
 
@@ -126,8 +126,8 @@ Se preferir ter uma API com suporte a escrita (PUT/PATCH), você pode rodar um s
 
 ```bash
 # 1. Clone o repositório da API
-git clone https://github.com/ThiagoLifters/api_test.git
-cd api_test
+git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
+cd tickets-mock-api
 
 # 2. Instale o json-server
 npm install -g json-server

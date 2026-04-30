@@ -1,0 +1,36 @@
+{
+  "id": "TKT-001",
+  "title": "Login não funciona após atualização do sistema",
+  "user": "mariana.costa@empresa.com",
+  "status": "open",
+  "priority": "high",
+  "created_at": "2025-04-01T08:14:22Z",
+  "updated_at": "2025-04-01T09:30:00Z",
+  "description": "Após a atualização realizada em 31/03, vários usuários relataram que o sistema de login parou de funcionar. A tela fica carregando indefinidamente e não exibe mensagem de erro. Reproduzido nos navegadores Chrome 123 e Firefox 124.",
+  "tags": [
+    "auth",
+    "critical",
+    "regression"
+  ],
+  "assignee": "joao.silva@empresa.com",
+  "history": [
+    {
+      "id": "h1",
+      "action": "Chamado aberto",
+      "user": "mariana.costa@empresa.com",
+      "timestamp": "2025-04-01T08:14:22Z"
+    },
+    {
+      "id": "h2",
+      "action": "Status alterado para: aberto",
+      "user": "sistema",
+      "timestamp": "2025-04-01T08:14:23Z"
+    },
+    {
+      "id": "h3",
+      "action": "Atribuído para joao.silva@empresa.com",
+      "user": "ana.lima@empresa.com",
+      "timestamp": "2025-04-01T09:30:00Z"
+    }
+  ]
+}

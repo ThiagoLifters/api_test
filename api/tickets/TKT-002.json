@@ -1,0 +1,36 @@
+{
+  "id": "TKT-002",
+  "title": "Relatório de vendas exportando dados incorretos",
+  "user": "pedro.alves@empresa.com",
+  "status": "in_progress",
+  "priority": "high",
+  "created_at": "2025-04-02T11:05:00Z",
+  "updated_at": "2025-04-03T14:20:00Z",
+  "description": "O relatório de vendas mensal está exportando valores de meses anteriores ao solicitado. Testado com o período de março/2025, mas os dados retornados são de fevereiro. O problema ocorre apenas na exportação em XLSX; o CSV exporta corretamente.",
+  "tags": [
+    "reports",
+    "xlsx",
+    "data"
+  ],
+  "assignee": "carla.souza@empresa.com",
+  "history": [
+    {
+      "id": "h4",
+      "action": "Chamado aberto",
+      "user": "pedro.alves@empresa.com",
+      "timestamp": "2025-04-02T11:05:00Z"
+    },
+    {
+      "id": "h5",
+      "action": "Status alterado para: em andamento",
+      "user": "carla.souza@empresa.com",
+      "timestamp": "2025-04-03T14:20:00Z"
+    },
+    {
+      "id": "h6",
+      "action": "Comentário: Identificado o problema na query de agrupamento por data. Correção em progresso.",
+      "user": "carla.souza@empresa.com",
+      "timestamp": "2025-04-03T15:00:00Z"
+    }
+  ]
+}

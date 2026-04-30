@@ -1,0 +1,36 @@
+{
+  "id": "TKT-006",
+  "title": "Notificações por e-mail chegando com atraso",
+  "user": "beatriz.cardoso@empresa.com",
+  "status": "resolved",
+  "priority": "low",
+  "created_at": "2025-03-20T10:00:00Z",
+  "updated_at": "2025-03-22T17:00:00Z",
+  "description": "E-mails de notificação de novos pedidos estão chegando com atraso de até 2 horas após o evento. O problema afeta apenas notificações automáticas; e-mails manuais chegam sem atraso.",
+  "tags": [
+    "email",
+    "notifications",
+    "queue"
+  ],
+  "assignee": "marcos.oliveira@empresa.com",
+  "history": [
+    {
+      "id": "h15",
+      "action": "Chamado aberto",
+      "user": "beatriz.cardoso@empresa.com",
+      "timestamp": "2025-03-20T10:00:00Z"
+    },
+    {
+      "id": "h16",
+      "action": "Causa identificada: fila de e-mail com backlog acumulado",
+      "user": "marcos.oliveira@empresa.com",
+      "timestamp": "2025-03-21T09:00:00Z"
+    },
+    {
+      "id": "h17",
+      "action": "Status alterado para: resolvido — fila limpa e worker reiniciado",
+      "user": "marcos.oliveira@empresa.com",
+      "timestamp": "2025-03-22T17:00:00Z"
+    }
+  ]
+}

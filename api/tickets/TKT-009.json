@@ -1,0 +1,30 @@
+{
+  "id": "TKT-009",
+  "title": "Campos obrigatórios não destacados no mobile",
+  "user": "camila.pereira@empresa.com",
+  "status": "resolved",
+  "priority": "low",
+  "created_at": "2025-03-15T11:30:00Z",
+  "updated_at": "2025-03-18T16:00:00Z",
+  "description": "Em dispositivos móveis, os campos obrigatórios não exibem o asterisco vermelho de indicação. A validação funciona, mas o usuário não sabe quais campos são obrigatórios antes de tentar enviar o formulário.",
+  "tags": [
+    "mobile",
+    "ui",
+    "accessibility"
+  ],
+  "assignee": "paulo.ribeiro@empresa.com",
+  "history": [
+    {
+      "id": "h21",
+      "action": "Chamado aberto",
+      "user": "camila.pereira@empresa.com",
+      "timestamp": "2025-03-15T11:30:00Z"
+    },
+    {
+      "id": "h22",
+      "action": "Status alterado para: resolvido — CSS responsivo corrigido",
+      "user": "paulo.ribeiro@empresa.com",
+      "timestamp": "2025-03-18T16:00:00Z"
+    }
+  ]
+}

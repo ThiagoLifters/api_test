@@ -1,0 +1,30 @@
+{
+  "id": "TKT-013",
+  "title": "Gráfico de desempenho não renderiza no Safari",
+  "user": "leticia.moura@empresa.com",
+  "status": "resolved",
+  "priority": "low",
+  "created_at": "2025-03-25T09:00:00Z",
+  "updated_at": "2025-03-27T11:00:00Z",
+  "description": "O gráfico de desempenho mensal não renderiza no Safari 17 (macOS e iOS). A área do gráfico aparece em branco. Chrome e Firefox funcionam corretamente. Nenhum erro é exibido no console do Safari.",
+  "tags": [
+    "safari",
+    "chart",
+    "compatibility"
+  ],
+  "assignee": "renata.campos@empresa.com",
+  "history": [
+    {
+      "id": "h27",
+      "action": "Chamado aberto",
+      "user": "leticia.moura@empresa.com",
+      "timestamp": "2025-03-25T09:00:00Z"
+    },
+    {
+      "id": "h28",
+      "action": "Status alterado para: resolvido — biblioteca de gráficos atualizada para versão com suporte a Safari",
+      "user": "renata.campos@empresa.com",
+      "timestamp": "2025-03-27T11:00:00Z"
+    }
+  ]
+}

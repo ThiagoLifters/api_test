@@ -11,8 +11,8 @@ Disponibiliza 20 chamados (tickets) realistas com histórico, prioridades e stat
 ### 1. Fork / clone este repositório
 
 ```bash
-git clone https://github.com/ThiagoLifters/api_test
-cd api_test
+git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
+cd tickets-mock-api
 ```
 
 ### 2. Ativar GitHub Pages
@@ -25,7 +25,7 @@ cd api_test
 A API estará disponível em:
 
 ```
-https://ThiagoLifters.github.io/api_test/api/tickets.json
+https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets.json
 ```
 
 ### 3. Enviar o link ao candidato
@@ -37,7 +37,7 @@ Compartilhe o arquivo `API.md` com o candidato. Ele contém todos os endpoints d
 ## 📁 Estrutura do repositório
 
 ```
-api_test/
+tickets-mock-api/
 ├── db.json                    # Base de dados completa (json-server)
 ├── API.md                     # Documentação para o candidato
 ├── README.md                  # Este arquivo (uso interno)
@@ -71,8 +71,8 @@ Permite GET, POST, PUT, PATCH e DELETE. Candidatos mais avançados podem usá-lo
 npm install -g json-server
 
 # Clonar o repo e rodar
-git clone https://github.com/ThiagoLifters/api_test.git
-cd api_test
+git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
+cd tickets-mock-api
 json-server --watch db.json --port 3001
 ```
 

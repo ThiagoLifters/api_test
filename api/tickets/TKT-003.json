@@ -1,0 +1,42 @@
+{
+  "id": "TKT-003",
+  "title": "Botão de salvar não responde no formulário de cadastro",
+  "user": "lucia.ferreira@empresa.com",
+  "status": "resolved",
+  "priority": "medium",
+  "created_at": "2025-03-28T16:45:00Z",
+  "updated_at": "2025-03-30T10:00:00Z",
+  "description": "No formulário de cadastro de novos clientes, o botão 'Salvar' não dispara nenhuma ação ao ser clicado. Não há feedback visual nem erro no console. Reproduzível apenas quando o campo 'CNPJ' está preenchido com caracteres especiais.",
+  "tags": [
+    "form",
+    "ui",
+    "validation"
+  ],
+  "assignee": "rafael.mendes@empresa.com",
+  "history": [
+    {
+      "id": "h7",
+      "action": "Chamado aberto",
+      "user": "lucia.ferreira@empresa.com",
+      "timestamp": "2025-03-28T16:45:00Z"
+    },
+    {
+      "id": "h8",
+      "action": "Status alterado para: em andamento",
+      "user": "rafael.mendes@empresa.com",
+      "timestamp": "2025-03-29T09:00:00Z"
+    },
+    {
+      "id": "h9",
+      "action": "Correção aplicada: validação de CNPJ atualizada para aceitar máscara corretamente",
+      "user": "rafael.mendes@empresa.com",
+      "timestamp": "2025-03-30T09:45:00Z"
+    },
+    {
+      "id": "h10",
+      "action": "Status alterado para: resolvido",
+      "user": "rafael.mendes@empresa.com",
+      "timestamp": "2025-03-30T10:00:00Z"
+    }
+  ]
+}

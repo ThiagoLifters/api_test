@@ -1,0 +1,30 @@
+{
+  "id": "TKT-019",
+  "title": "Paginação quebrando ao usar filtros combinados",
+  "user": "anderson.melo@empresa.com",
+  "status": "in_progress",
+  "priority": "medium",
+  "created_at": "2025-04-04T16:30:00Z",
+  "updated_at": "2025-04-06T10:00:00Z",
+  "description": "Ao combinar dois ou mais filtros na listagem de pedidos (ex: status + período), a paginação para de funcionar corretamente. Ao avançar para a página 2, os resultados exibidos são os mesmos da página 1.",
+  "tags": [
+    "pagination",
+    "filter",
+    "orders"
+  ],
+  "assignee": "igor.santos@empresa.com",
+  "history": [
+    {
+      "id": "h36",
+      "action": "Chamado aberto",
+      "user": "anderson.melo@empresa.com",
+      "timestamp": "2025-04-04T16:30:00Z"
+    },
+    {
+      "id": "h37",
+      "action": "Reproduzido: parâmetro de página não é resetado ao aplicar filtros",
+      "user": "igor.santos@empresa.com",
+      "timestamp": "2025-04-06T10:00:00Z"
+    }
+  ]
+}
