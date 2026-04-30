@@ -1,0 +1,206 @@
+{
+  "id": "EVT-002",
+  "name": "Design Week Rio",
+  "date": "2025-04-20T10:00:00-03:00",
+  "location": "Museu do Amanhã, Rio de Janeiro – RJ",
+  "status": "closed",
+  "description": "Semana dedicada ao design contemporâneo com workshops, palestras e exposições de designers nacionais e internacionais.",
+  "expected_count": 8,
+  "checkin_count": 6,
+  "error_count": 2,
+  "entry_rate": 0.75,
+  "participants": [
+    {
+      "id": "EVT-002-P001",
+      "event_id": "EVT-002",
+      "name": "Amanda Barros",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 2
+    },
+    {
+      "id": "EVT-002-P002",
+      "event_id": "EVT-002",
+      "name": "Lucas Ribeiro",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 2
+    },
+    {
+      "id": "EVT-002-P003",
+      "event_id": "EVT-002",
+      "name": "Camila Rocha",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-002-P004",
+      "event_id": "EVT-002",
+      "name": "Ana Souza",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-002-P005",
+      "event_id": "EVT-002",
+      "name": "Beatriz Araujo",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-002-P006",
+      "event_id": "EVT-002",
+      "name": "Amanda Monteiro",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-002-P007",
+      "event_id": "EVT-002",
+      "name": "Rodrigo Ferreira",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-002-P008",
+      "event_id": "EVT-002",
+      "name": "Gabriel Nascimento",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    }
+  ],
+  "checkins": [
+    {
+      "id": "EVT-002-CK014",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P007",
+      "timestamp": "2025-04-21T00:52:00.000Z",
+      "success": false,
+      "action": "entry",
+      "error_reason": "event_closed"
+    },
+    {
+      "id": "EVT-002-CK011",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P005",
+      "timestamp": "2025-04-20T17:30:00.000Z",
+      "success": false,
+      "action": "entry",
+      "error_reason": "already_checked_in"
+    },
+    {
+      "id": "EVT-002-CK013",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P006",
+      "timestamp": "2025-04-20T17:21:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK010",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P005",
+      "timestamp": "2025-04-20T16:14:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK012",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P006",
+      "timestamp": "2025-04-20T15:33:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK008",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P004",
+      "timestamp": "2025-04-20T15:07:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK009",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P005",
+      "timestamp": "2025-04-20T14:22:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK004",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P002",
+      "timestamp": "2025-04-20T14:17:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK006",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P003",
+      "timestamp": "2025-04-20T14:00:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK002",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P001",
+      "timestamp": "2025-04-20T13:17:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK007",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P004",
+      "timestamp": "2025-04-20T13:11:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK003",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P002",
+      "timestamp": "2025-04-20T13:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK001",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P001",
+      "timestamp": "2025-04-20T12:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-002-CK005",
+      "event_id": "EVT-002",
+      "participant_id": "EVT-002-P003",
+      "timestamp": "2025-04-20T12:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    }
+  ]
+}

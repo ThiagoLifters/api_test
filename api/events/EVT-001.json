@@ -1,0 +1,283 @@
+{
+  "id": "EVT-001",
+  "name": "Tech Summit 2025",
+  "date": "2025-05-15T09:00:00-03:00",
+  "location": "Centro de Convenções, São Paulo – SP",
+  "status": "active",
+  "description": "O maior evento de tecnologia do Brasil reúne líderes do setor para debater IA, cloud e o futuro do desenvolvimento de software.",
+  "expected_count": 12,
+  "checkin_count": 11,
+  "error_count": 1,
+  "entry_rate": 0.92,
+  "participants": [
+    {
+      "id": "EVT-001-P001",
+      "event_id": "EVT-001",
+      "name": "Ana Pereira",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 4
+    },
+    {
+      "id": "EVT-001-P002",
+      "event_id": "EVT-001",
+      "name": "Pedro Barros",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 2
+    },
+    {
+      "id": "EVT-001-P003",
+      "event_id": "EVT-001",
+      "name": "Henrique Ribeiro",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 4
+    },
+    {
+      "id": "EVT-001-P004",
+      "event_id": "EVT-001",
+      "name": "Pedro Freitas",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P005",
+      "event_id": "EVT-001",
+      "name": "Natalia Carvalho",
+      "type": "normal",
+      "status": "inside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P006",
+      "event_id": "EVT-001",
+      "name": "Amanda Costa",
+      "type": "normal",
+      "status": "inside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P007",
+      "event_id": "EVT-001",
+      "name": "Lucas Rocha",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P008",
+      "event_id": "EVT-001",
+      "name": "Fernanda Carvalho",
+      "type": "normal",
+      "status": "inside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P009",
+      "event_id": "EVT-001",
+      "name": "Gabriel Cardoso",
+      "type": "normal",
+      "status": "inside",
+      "checkin_count": 1
+    },
+    {
+      "id": "EVT-001-P010",
+      "event_id": "EVT-001",
+      "name": "Camila Martins",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-001-P011",
+      "event_id": "EVT-001",
+      "name": "Vinicius Araujo",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-001-P012",
+      "event_id": "EVT-001",
+      "name": "Fernanda Ferreira",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    }
+  ],
+  "checkins": [
+    {
+      "id": "EVT-001-CK010",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P003",
+      "timestamp": "2025-05-15T18:51:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK019",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P009",
+      "timestamp": "2025-05-15T17:55:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK009",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P003",
+      "timestamp": "2025-05-15T17:34:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK015",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P006",
+      "timestamp": "2025-05-15T17:30:00.000Z",
+      "success": false,
+      "action": "entry",
+      "error_reason": "already_checked_in"
+    },
+    {
+      "id": "EVT-001-CK017",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P007",
+      "timestamp": "2025-05-15T17:21:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK004",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P001",
+      "timestamp": "2025-05-15T16:51:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK018",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P008",
+      "timestamp": "2025-05-15T16:44:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK003",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P001",
+      "timestamp": "2025-05-15T15:34:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK016",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P007",
+      "timestamp": "2025-05-15T15:33:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK008",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P003",
+      "timestamp": "2025-05-15T15:17:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK014",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P006",
+      "timestamp": "2025-05-15T14:22:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK006",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P002",
+      "timestamp": "2025-05-15T14:17:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK007",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P003",
+      "timestamp": "2025-05-15T14:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK012",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P004",
+      "timestamp": "2025-05-15T14:00:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK002",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P001",
+      "timestamp": "2025-05-15T13:17:00.000Z",
+      "success": true,
+      "action": "exit",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK013",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P005",
+      "timestamp": "2025-05-15T13:11:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK005",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P002",
+      "timestamp": "2025-05-15T13:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK001",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P001",
+      "timestamp": "2025-05-15T12:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    },
+    {
+      "id": "EVT-001-CK011",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P004",
+      "timestamp": "2025-05-15T12:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
+    }
+  ]
+}

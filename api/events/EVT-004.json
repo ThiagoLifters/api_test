@@ -1,0 +1,135 @@
+{
+  "id": "EVT-004",
+  "name": "Festival de Música Indie",
+  "date": "2025-03-10T14:00:00-03:00",
+  "location": "Parque Villa-Lobos, São Paulo – SP",
+  "status": "cancelled",
+  "description": "Festival com bandas independentes brasileiras e internacionais. Evento cancelado por condições climáticas adversas.",
+  "expected_count": 15,
+  "checkin_count": 0,
+  "error_count": 0,
+  "entry_rate": 0,
+  "participants": [
+    {
+      "id": "EVT-004-P001",
+      "event_id": "EVT-004",
+      "name": "Camila Souza",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P002",
+      "event_id": "EVT-004",
+      "name": "Ana Costa",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P003",
+      "event_id": "EVT-004",
+      "name": "Rafael Santos",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P004",
+      "event_id": "EVT-004",
+      "name": "Henrique Freitas",
+      "type": "vip",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P005",
+      "event_id": "EVT-004",
+      "name": "Felipe Gomes",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P006",
+      "event_id": "EVT-004",
+      "name": "Lucas Costa",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P007",
+      "event_id": "EVT-004",
+      "name": "Mariana Ferreira",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P008",
+      "event_id": "EVT-004",
+      "name": "Thiago Oliveira",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P009",
+      "event_id": "EVT-004",
+      "name": "Carlos Souza",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P010",
+      "event_id": "EVT-004",
+      "name": "Rafael Pereira",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P011",
+      "event_id": "EVT-004",
+      "name": "Rafael Carvalho",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P012",
+      "event_id": "EVT-004",
+      "name": "Mariana Cardoso",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P013",
+      "event_id": "EVT-004",
+      "name": "Vinicius Silva",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P014",
+      "event_id": "EVT-004",
+      "name": "Mariana Monteiro",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    },
+    {
+      "id": "EVT-004-P015",
+      "event_id": "EVT-004",
+      "name": "Vinicius Araujo",
+      "type": "normal",
+      "status": "outside",
+      "checkin_count": 0
+    }
+  ],
+  "checkins": []
+}

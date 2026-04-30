@@ -1,121 +1,94 @@
-# 🎫 Tickets Mock API
+# 🎪 Events Mock API
 
-API de dados mockados para o **teste técnico de Front-End**.
+API de dados mockados para o **teste técnico de Front-End** — Painel de Gestão de Eventos.
 
-Disponibiliza 20 chamados (tickets) realistas com histórico, prioridades e status variados — incluindo alguns edge cases propositais (campos nulos, dados inconsistentes) para avaliar robustez do código do candidato.
+Disponibiliza 5 eventos com participantes, histórico de check-ins e edge cases propositais para avaliar robustez do código e aplicação de regras de negócio.
 
 ---
 
 ## ⚡ Setup em 3 passos
 
-### 1. Fork / clone este repositório
+### 1. Fork / clone
 
 ```bash
-git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
-cd tickets-mock-api
+git clone https://github.com/ThiagoLifters/api_test.git
+cd api_test
 ```
 
 ### 2. Ativar GitHub Pages
 
-1. Acesse **Settings → Pages** no repositório
-2. Em **Source**, selecione `main` branch e pasta `/` (root)
-3. Clique em **Save**
-4. Aguarde ~2 minutos para o deploy
+1. **Settings → Pages**
+2. Source: `main` branch, pasta `/` (root)
+3. **Save** — aguarde ~2 min
 
-A API estará disponível em:
-
+Endpoints disponíveis em:
 ```
-https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets.json
+https://ThiagoLifters.github.io/api_test/api/events.json
+https://ThiagoLifters.github.io/api_test/api/events/EVT-001.json
 ```
 
-### 3. Enviar o link ao candidato
-
-Compartilhe o arquivo `API.md` com o candidato. Ele contém todos os endpoints disponíveis e exemplos de uso.
+### 3. Compartilhar o `API.md` com o candidato
 
 ---
 
-## 📁 Estrutura do repositório
+## 📁 Estrutura
 
 ```
-tickets-mock-api/
-├── db.json                    # Base de dados completa (json-server)
-├── API.md                     # Documentação para o candidato
-├── README.md                  # Este arquivo (uso interno)
+api_test/
+├── db.json                        # Base completa (json-server)
+├── API.md                         # Documentação para o candidato
+├── README.md                      # Este arquivo
 └── api/
-    ├── tickets.json           # GET /api/tickets.json  → lista resumida
-    └── tickets/
-        ├── TKT-001.json       # GET /api/tickets/TKT-001.json
-        ├── TKT-002.json
-        └── ...                # TKT-001 até TKT-020
+    ├── events.json                # GET lista de eventos
+    └── events/
+        ├── EVT-001.json           # active  — Tech Summit 2025
+        ├── EVT-002.json           # closed  — Design Week Rio
+        ├── EVT-003.json           # active  — Startup Pitch Night
+        ├── EVT-004.json           # cancelled — Festival de Música Indie
+        └── EVT-005.json           # active  — DevConf Brasil
 ```
 
 ---
 
-## 🔀 Duas formas de usar
-
-### Opção A — GitHub Pages (estática, sem config)
-
-Endpoints somente leitura via HTTPS. Ideal para candidatos que querem focar no front-end sem configurar back-end.
+## 🔀 Opção A — GitHub Pages (estática)
 
 | Endpoint | Retorno |
 |---|---|
-| `GET /api/tickets.json` | Lista com 20 tickets (sem history) |
-| `GET /api/tickets/TKT-001.json` | Ticket completo com history |
+| `GET /api/events.json` | Lista com métricas agregadas |
+| `GET /api/events/EVT-001.json` | Evento completo com participants + checkins |
 
-### Opção B — json-server local (CRUD completo)
-
-Permite GET, POST, PUT, PATCH e DELETE. Candidatos mais avançados podem usá-lo para implementar alteração de status com persistência real.
+## 🔀 Opção B — json-server local (CRUD)
 
 ```bash
-# Instalar json-server (requer Node.js)
 npm install -g json-server
-
-# Clonar o repo e rodar
-git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
-cd tickets-mock-api
 json-server --watch db.json --port 3001
-```
-
-Endpoints gerados automaticamente:
-
-```
-GET    /tickets
-GET    /tickets/:id
-POST   /tickets
-PUT    /tickets/:id
-PATCH  /tickets/:id
-DELETE /tickets/:id
 ```
 
 ---
 
 ## 🐛 Edge cases propositais
 
-Os dados contêm situações que testam a robustez do código:
-
-| Ticket | Edge case |
+| Evento | Edge case |
 |---|---|
-| TKT-015 | `user` é `null` |
-| TKT-004, TKT-007, TKT-010, TKT-012, TKT-015, TKT-016, TKT-018 | `assignee` é `null` |
-| TKT-001 a TKT-020 | Mix de todos os status e prioridades |
-| TKT-015 | history registrado como `"user": "sistema"` (não humano) |
-
-Candidatos que não tratam valores nulos terão erros visíveis na interface — isso é proposital e faz parte da avaliação.
+| EVT-002 (`closed`) | Não deve aceitar novos check-ins |
+| EVT-004 (`cancelled`) | Sem participantes inside, checkin_count = 0 |
+| Qualquer evento | VIPs com `checkin_count > 1` e múltiplos registros no histórico |
+| EVT-002 | Registros com `error_reason: "event_closed"` |
+| Qualquer evento | Participante normal com `error_reason: "already_checked_in"` |
+| Qualquer evento | Participantes com `status: "outside"` apesar de terem feito check-in (saíram) |
+| `entry_rate` | Calculado como `checkin_count / expected_count` — pode ser menor que 1 |
 
 ---
 
 ## 🔄 Resetar dados (json-server)
 
-Se um candidato alterar os dados via json-server, basta re-clonar o repositório ou restaurar `db.json` via Git:
-
 ```bash
 git checkout db.json
 ```
 
----
-
 ## 📌 Observações
 
 - Os dados são fictícios e qualquer semelhança com pessoas ou empresas reais é coincidência.
+- O teste não deve ser compartilhado com terceiros.
 - O GitHub Pages pode levar até 5 minutos para propagar atualizações.
 - CORS já é habilitado por padrão no GitHub Pages e no json-server.

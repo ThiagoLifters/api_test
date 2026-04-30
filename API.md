@@ -8,42 +8,40 @@
 ## Base URL
 
 ```
-https://SEU_USUARIO.github.io/tickets-mock-api
+https://ThiagoLifters.github.io/api_test
 ```
 
-> **Nota:** substitua pela URL real informada pelo avaliador.
+> **Nota:** substitua pela URL real do seu repositório GitHub Pages.
 
 ---
 
 ## Endpoints disponíveis
 
-### `GET /api/tickets.json`
+### `GET /api/events.json`
 
-Retorna a lista completa de chamados.
-
-**Exemplo de requisição:**
+Retorna a lista completa de eventos.
 
 ```js
-const response = await fetch('https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets.json')
+const response = await fetch('https://ThiagoLifters.github.io/api_test/api/events.json')
 const { data, total } = await response.json()
 ```
 
-**Estrutura da resposta:**
-
+**Resposta:**
 ```json
 {
-  "total": 20,
+  "total": 5,
   "data": [
     {
-      "id": "TKT-001",
-      "title": "Login não funciona após atualização do sistema",
-      "user": "mariana.costa@empresa.com",
-      "status": "open",
-      "priority": "high",
-      "created_at": "2025-04-01T08:14:22Z",
-      "updated_at": "2025-04-01T09:30:00Z",
-      "tags": ["auth", "critical", "regression"],
-      "assignee": "joao.silva@empresa.com"
+      "id": "EVT-001",
+      "name": "Tech Summit 2025",
+      "date": "2025-05-15T09:00:00-03:00",
+      "location": "Centro de Convenções, São Paulo – SP",
+      "status": "active",
+      "description": "...",
+      "expected_count": 12,
+      "checkin_count": 11,
+      "error_count": 1,
+      "entry_rate": 0.92
     }
   ]
 }
@@ -51,37 +49,47 @@ const { data, total } = await response.json()
 
 ---
 
-### `GET /api/tickets/{id}.json`
+### `GET /api/events/{id}.json`
 
-Retorna os dados completos de um chamado, incluindo o histórico.
-
-**Exemplo de requisição:**
+Retorna os dados completos de um evento, incluindo participantes e histórico de check-ins.
 
 ```js
-const response = await fetch('https://SEU_USUARIO.github.io/tickets-mock-api/api/tickets/TKT-001.json')
-const ticket = await response.json()
+const response = await fetch('https://ThiagoLifters.github.io/api_test/api/events/EVT-001.json')
+const event = await response.json()
 ```
 
-**Estrutura da resposta:**
-
+**Resposta:**
 ```json
 {
-  "id": "TKT-001",
-  "title": "Login não funciona após atualização do sistema",
-  "user": "mariana.costa@empresa.com",
-  "status": "open",
-  "priority": "high",
-  "created_at": "2025-04-01T08:14:22Z",
-  "updated_at": "2025-04-01T09:30:00Z",
-  "description": "Após a atualização realizada em 31/03, vários usuários relataram...",
-  "tags": ["auth", "critical", "regression"],
-  "assignee": "joao.silva@empresa.com",
-  "history": [
+  "id": "EVT-001",
+  "name": "Tech Summit 2025",
+  "date": "2025-05-15T09:00:00-03:00",
+  "location": "Centro de Convenções, São Paulo – SP",
+  "status": "active",
+  "description": "...",
+  "expected_count": 12,
+  "checkin_count": 11,
+  "error_count": 1,
+  "entry_rate": 0.92,
+  "participants": [
     {
-      "id": "h1",
-      "action": "Chamado aberto",
-      "user": "mariana.costa@empresa.com",
-      "timestamp": "2025-04-01T08:14:22Z"
+      "id": "EVT-001-P001",
+      "event_id": "EVT-001",
+      "name": "Lucas Silva",
+      "type": "vip",
+      "status": "inside",
+      "checkin_count": 4
+    }
+  ],
+  "checkins": [
+    {
+      "id": "EVT-001-CK001",
+      "event_id": "EVT-001",
+      "participant_id": "EVT-001-P001",
+      "timestamp": "2025-05-15T12:00:00.000Z",
+      "success": true,
+      "action": "entry",
+      "error_reason": null
     }
   ]
 }
@@ -91,74 +99,111 @@ const ticket = await response.json()
 
 ## Tipos de dados
 
-### Status (`status`)
+### Status do evento (`status`)
 
 | Valor | Descrição |
 |---|---|
-| `"open"` | Aberto |
-| `"in_progress"` | Em andamento |
-| `"resolved"` | Resolvido |
+| `"active"` | Ativo — aceita check-ins |
+| `"closed"` | Encerrado — não aceita novos check-ins |
+| `"cancelled"` | Cancelado — sem check-ins |
 
-### Prioridade (`priority`)
+### Tipo do participante (`type`)
+
+| Valor | Regra de negócio |
+|---|---|
+| `"vip"` | Pode entrar e sair múltiplas vezes |
+| `"normal"` | Apenas um check-in permitido |
+
+### Status do participante (`status`)
 
 | Valor | Descrição |
 |---|---|
-| `"low"` | Baixa |
-| `"medium"` | Média |
-| `"high"` | Alta |
+| `"inside"` | Dentro do evento |
+| `"outside"` | Fora do evento |
 
----
+### Ação de check-in (`action`)
 
-## ⚠️ Observações importantes
+| Valor | Descrição |
+|---|---|
+| `"entry"` | Entrada |
+| `"exit"` | Saída (apenas VIP) |
 
-- A API é **somente leitura** (GET). Para simular alterações de status, gerencie o estado localmente no front-end.
-- Alguns campos podem retornar `null` — seu código deve tratar esses casos.
-- Os dados **não persistem** entre sessões — isso é esperado para um ambiente de teste.
-- Não há autenticação necessária para acessar os endpoints.
+### Motivo de erro (`error_reason`)
 
----
-
-## Alternativa: json-server local (CRUD completo)
-
-Se preferir ter uma API com suporte a escrita (PUT/PATCH), você pode rodar um servidor local:
-
-**Pré-requisito:** Node.js instalado.
-
-```bash
-# 1. Clone o repositório da API
-git clone https://github.com/SEU_USUARIO/tickets-mock-api.git
-cd tickets-mock-api
-
-# 2. Instale o json-server
-npm install -g json-server
-
-# 3. Inicie o servidor
-json-server --watch db.json --port 3001
-```
-
-Com json-server rodando, os endpoints disponíveis são:
-
-| Método | Endpoint | Descrição |
-|---|---|---|
-| `GET` | `/tickets` | Lista todos os chamados |
-| `GET` | `/tickets/:id` | Retorna um chamado pelo ID |
-| `PATCH` | `/tickets/:id` | Atualiza campos de um chamado |
-| `PUT` | `/tickets/:id` | Substitui um chamado completo |
-
-**Exemplo de atualização de status:**
-
-```js
-await fetch('http://localhost:3001/tickets/TKT-001', {
-  method: 'PATCH',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ status: 'in_progress' })
-})
-```
-
-> Dica: caso queira resetar os dados ao estado original, restaure o `db.json` via `git checkout db.json`.
+| Valor | Descrição |
+|---|---|
+| `null` | Sem erro (sucesso) |
+| `"already_checked_in"` | Participante normal tentou entrar novamente |
+| `"event_closed"` | Tentativa em evento encerrado |
 
 ---
 
 ## IDs disponíveis
 
-`TKT-001` até `TKT-020`
+| ID | Nome | Status |
+|---|---|---|
+| `EVT-001` | Tech Summit 2025 | `active` |
+| `EVT-002` | Design Week Rio | `closed` |
+| `EVT-003` | Startup Pitch Night | `active` |
+| `EVT-004` | Festival de Música Indie | `cancelled` |
+| `EVT-005` | DevConf Brasil | `active` |
+
+---
+
+## ⚠️ Observações
+
+- A API é **somente leitura** (GET). Gerencie o estado de check-ins localmente no front-end.
+- `error_reason: null` nos registros de sucesso — trate esse campo como nullable.
+- EVT-002 (`closed`) contém tentativas com `error_reason: "event_closed"` para teste.
+- EVT-004 (`cancelled`) não possui check-ins nem participantes dentro.
+- Participantes VIP têm `checkin_count > 1` no histórico.
+- Não há autenticação necessária.
+
+---
+
+## Alternativa: json-server local (CRUD completo)
+
+```bash
+git clone https://github.com/ThiagoLifters/api_test.git
+cd api_test
+npm install -g json-server
+json-server --watch db.json --port 3001
+```
+
+Endpoints disponíveis com json-server:
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| `GET` | `/events` | Lista eventos |
+| `GET` | `/events/:id` | Detalhe do evento |
+| `GET` | `/participants?event_id=EVT-001` | Participantes do evento |
+| `GET` | `/checkins?event_id=EVT-001` | Check-ins do evento |
+| `POST` | `/checkins` | Registrar check-in |
+| `PATCH` | `/participants/:id` | Atualizar status do participante |
+| `PATCH` | `/events/:id` | Atualizar métricas do evento |
+
+**Exemplo — registrar check-in:**
+```js
+// 1. Registrar no histórico
+await fetch('http://localhost:3001/checkins', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    event_id: 'EVT-001',
+    participant_id: 'EVT-001-P004',
+    timestamp: new Date().toISOString(),
+    success: true,
+    action: 'entry',
+    error_reason: null,
+  })
+})
+
+// 2. Atualizar status do participante
+await fetch('http://localhost:3001/participants/EVT-001-P004', {
+  method: 'PATCH',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ status: 'inside', checkin_count: 1 })
+})
+```
+
+> Resetar dados: `git checkout db.json`
