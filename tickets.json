@@ -1,0 +1,326 @@
+{
+  "data": [
+    {
+      "id": "TKT-001",
+      "title": "Login não funciona após atualização do sistema",
+      "user": "mariana.costa@empresa.com",
+      "status": "open",
+      "priority": "high",
+      "created_at": "2025-04-01T08:14:22Z",
+      "updated_at": "2025-04-01T09:30:00Z",
+      "description": "Após a atualização realizada em 31/03, vários usuários relataram que o sistema de login parou de funcionar. A tela fica carregando indefinidamente e não exibe mensagem de erro. Reproduzido nos navegadores Chrome 123 e Firefox 124.",
+      "tags": [
+        "auth",
+        "critical",
+        "regression"
+      ],
+      "assignee": "joao.silva@empresa.com"
+    },
+    {
+      "id": "TKT-002",
+      "title": "Relatório de vendas exportando dados incorretos",
+      "user": "pedro.alves@empresa.com",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-04-02T11:05:00Z",
+      "updated_at": "2025-04-03T14:20:00Z",
+      "description": "O relatório de vendas mensal está exportando valores de meses anteriores ao solicitado. Testado com o período de março/2025, mas os dados retornados são de fevereiro. O problema ocorre apenas na exportação em XLSX; o CSV exporta corretamente.",
+      "tags": [
+        "reports",
+        "xlsx",
+        "data"
+      ],
+      "assignee": "carla.souza@empresa.com"
+    },
+    {
+      "id": "TKT-003",
+      "title": "Botão de salvar não responde no formulário de cadastro",
+      "user": "lucia.ferreira@empresa.com",
+      "status": "resolved",
+      "priority": "medium",
+      "created_at": "2025-03-28T16:45:00Z",
+      "updated_at": "2025-03-30T10:00:00Z",
+      "description": "No formulário de cadastro de novos clientes, o botão 'Salvar' não dispara nenhuma ação ao ser clicado. Não há feedback visual nem erro no console. Reproduzível apenas quando o campo 'CNPJ' está preenchido com caracteres especiais.",
+      "tags": [
+        "form",
+        "ui",
+        "validation"
+      ],
+      "assignee": "rafael.mendes@empresa.com"
+    },
+    {
+      "id": "TKT-004",
+      "title": "Dashboard lento ao carregar com mais de 500 registros",
+      "user": "fernando.santos@empresa.com",
+      "status": "open",
+      "priority": "medium",
+      "created_at": "2025-04-04T09:20:00Z",
+      "updated_at": "2025-04-04T09:20:00Z",
+      "description": "O dashboard principal demora mais de 15 segundos para carregar quando há mais de 500 registros na listagem. Em ambientes com menos dados, o carregamento é quase imediato. Suspeita-se que a paginação não está sendo aplicada corretamente.",
+      "tags": [
+        "performance",
+        "dashboard",
+        "pagination"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-005",
+      "title": "Erro 500 ao tentar emitir nota fiscal",
+      "user": "gabriela.rocha@empresa.com",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-04-05T13:10:00Z",
+      "updated_at": "2025-04-05T15:30:00Z",
+      "description": "Ao clicar em 'Emitir NF-e', o sistema retorna erro 500 sem detalhes adicionais. O problema foi identificado apenas para clientes pessoa jurídica no estado de SP. Clientes de outros estados e PF funcionam normalmente.",
+      "tags": [
+        "nfe",
+        "fiscal",
+        "backend"
+      ],
+      "assignee": "thiago.lima@empresa.com"
+    },
+    {
+      "id": "TKT-006",
+      "title": "Notificações por e-mail chegando com atraso",
+      "user": "beatriz.cardoso@empresa.com",
+      "status": "resolved",
+      "priority": "low",
+      "created_at": "2025-03-20T10:00:00Z",
+      "updated_at": "2025-03-22T17:00:00Z",
+      "description": "E-mails de notificação de novos pedidos estão chegando com atraso de até 2 horas após o evento. O problema afeta apenas notificações automáticas; e-mails manuais chegam sem atraso.",
+      "tags": [
+        "email",
+        "notifications",
+        "queue"
+      ],
+      "assignee": "marcos.oliveira@empresa.com"
+    },
+    {
+      "id": "TKT-007",
+      "title": "Filtro de data não considera fuso horário corretamente",
+      "user": "rodrigo.lima@empresa.com",
+      "status": "open",
+      "priority": "medium",
+      "created_at": "2025-04-06T08:00:00Z",
+      "updated_at": "2025-04-06T08:00:00Z",
+      "description": "Ao filtrar registros por data, o sistema não considera o fuso horário do usuário. Usuários em Brasília (UTC-3) veem registros de um dia anterior ou posterior ao esperado. O problema é mais crítico em horários próximos à meia-noite.",
+      "tags": [
+        "timezone",
+        "filter",
+        "date"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-008",
+      "title": "Upload de arquivos falha para PDFs acima de 5MB",
+      "user": "juliana.nascimento@empresa.com",
+      "status": "in_progress",
+      "priority": "medium",
+      "created_at": "2025-04-03T14:00:00Z",
+      "updated_at": "2025-04-04T11:00:00Z",
+      "description": "O sistema rejeita PDFs com tamanho superior a 5MB com a mensagem 'Erro ao fazer upload'. A documentação indica que o limite deveria ser de 10MB. Arquivos de outros formatos (DOCX, XLSX) com o mesmo tamanho sobem normalmente.",
+      "tags": [
+        "upload",
+        "pdf",
+        "storage"
+      ],
+      "assignee": "diana.souza@empresa.com"
+    },
+    {
+      "id": "TKT-009",
+      "title": "Campos obrigatórios não destacados no mobile",
+      "user": "camila.pereira@empresa.com",
+      "status": "resolved",
+      "priority": "low",
+      "created_at": "2025-03-15T11:30:00Z",
+      "updated_at": "2025-03-18T16:00:00Z",
+      "description": "Em dispositivos móveis, os campos obrigatórios não exibem o asterisco vermelho de indicação. A validação funciona, mas o usuário não sabe quais campos são obrigatórios antes de tentar enviar o formulário.",
+      "tags": [
+        "mobile",
+        "ui",
+        "accessibility"
+      ],
+      "assignee": "paulo.ribeiro@empresa.com"
+    },
+    {
+      "id": "TKT-010",
+      "title": "Pesquisa de clientes retorna resultados duplicados",
+      "user": "henrique.costa@empresa.com",
+      "status": "open",
+      "priority": "low",
+      "created_at": "2025-04-07T10:45:00Z",
+      "updated_at": "2025-04-07T10:45:00Z",
+      "description": "A pesquisa por nome de cliente na tela de pedidos retorna o mesmo cliente duplicado quando ele possui mais de um contato cadastrado. Ao selecionar qualquer um dos resultados duplicados, o comportamento é o correto.",
+      "tags": [
+        "search",
+        "duplicate",
+        "query"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-011",
+      "title": "Impressão de boletos cortando margem direita",
+      "user": "ana.beatriz@empresa.com",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-04-06T15:00:00Z",
+      "updated_at": "2025-04-07T09:00:00Z",
+      "description": "Ao imprimir boletos pelo sistema, a margem direita é cortada em cerca de 2cm. O problema ocorre em impressoras HP e Epson testadas. Boletos gerados em PDF e abertos externamente imprimem corretamente.",
+      "tags": [
+        "print",
+        "boleto",
+        "layout"
+      ],
+      "assignee": "silvia.andrade@empresa.com"
+    },
+    {
+      "id": "TKT-012",
+      "title": "Sessão expira antes do tempo configurado",
+      "user": "vitor.martins@empresa.com",
+      "status": "open",
+      "priority": "medium",
+      "created_at": "2025-04-07T14:20:00Z",
+      "updated_at": "2025-04-07T14:20:00Z",
+      "description": "Usuários relatam que a sessão expira em cerca de 10 minutos, apesar da configuração definir 60 minutos de inatividade. O problema foi reportado por usuários de diferentes departamentos e navegadores.",
+      "tags": [
+        "auth",
+        "session",
+        "config"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-013",
+      "title": "Gráfico de desempenho não renderiza no Safari",
+      "user": "leticia.moura@empresa.com",
+      "status": "resolved",
+      "priority": "low",
+      "created_at": "2025-03-25T09:00:00Z",
+      "updated_at": "2025-03-27T11:00:00Z",
+      "description": "O gráfico de desempenho mensal não renderiza no Safari 17 (macOS e iOS). A área do gráfico aparece em branco. Chrome e Firefox funcionam corretamente. Nenhum erro é exibido no console do Safari.",
+      "tags": [
+        "safari",
+        "chart",
+        "compatibility"
+      ],
+      "assignee": "renata.campos@empresa.com"
+    },
+    {
+      "id": "TKT-014",
+      "title": "Integração com ERP não sincroniza pedidos cancelados",
+      "user": "gustavo.freitas@empresa.com",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-04-05T10:00:00Z",
+      "updated_at": "2025-04-07T16:00:00Z",
+      "description": "Pedidos cancelados no sistema não estão sendo refletidos no ERP. A sincronização funciona para pedidos novos e alterados, mas o evento de cancelamento não dispara a atualização. Isso causa divergência nos estoques.",
+      "tags": [
+        "erp",
+        "integration",
+        "sync"
+      ],
+      "assignee": "fabio.nunes@empresa.com"
+    },
+    {
+      "id": "TKT-015",
+      "title": "Página de perfil do usuário sem dados ao recarregar",
+      "user": null,
+      "status": "open",
+      "priority": "medium",
+      "created_at": "2025-04-08T07:30:00Z",
+      "updated_at": "2025-04-08T07:30:00Z",
+      "description": "Ao acessar a página de perfil e recarregar (F5), os dados do usuário não são carregados. A página exibe os campos em branco. Navegar até outra página e voltar ao perfil restaura os dados normalmente.",
+      "tags": [
+        "profile",
+        "state",
+        "reload"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-016",
+      "title": "Cálculo de frete retornando valor zerado para CEPs do Norte",
+      "user": "patricia.xavier@empresa.com",
+      "status": "open",
+      "priority": "high",
+      "created_at": "2025-04-08T09:00:00Z",
+      "updated_at": "2025-04-08T09:00:00Z",
+      "description": "Para CEPs das regiões Norte e Nordeste (AM, PA, MA, PI, CE, RN, PB, PE, AL, SE, BA), o cálculo de frete retorna R$ 0,00. Pedidos estão sendo finalizados sem cobrança de frete. O problema parece estar na tabela de regiões da transportadora.",
+      "tags": [
+        "freight",
+        "calculation",
+        "regions"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-017",
+      "title": "Botão de exportar PDF desabilitado sem motivo",
+      "user": "eduardo.barros@empresa.com",
+      "status": "resolved",
+      "priority": "low",
+      "created_at": "2025-03-10T14:00:00Z",
+      "updated_at": "2025-03-11T10:30:00Z",
+      "description": "O botão de exportar relatório em PDF aparece desabilitado para usuários com perfil 'Analista'. Outros perfis (Gerente, Admin) conseguem exportar normalmente. A permissão para exportação não está documentada como restrita.",
+      "tags": [
+        "permissions",
+        "export",
+        "pdf"
+      ],
+      "assignee": "clara.tavares@empresa.com"
+    },
+    {
+      "id": "TKT-018",
+      "title": "Campo de busca ignorando acentuação",
+      "user": "monica.duarte@empresa.com",
+      "status": "open",
+      "priority": "low",
+      "created_at": "2025-04-08T11:00:00Z",
+      "updated_at": "2025-04-08T11:00:00Z",
+      "description": "A busca por nome de produto não funciona ao digitar palavras com acento. Exemplo: buscar 'camisão' não retorna resultados, mas 'camisao' funciona. O problema afeta toda a busca textual do sistema.",
+      "tags": [
+        "search",
+        "encoding",
+        "i18n"
+      ],
+      "assignee": null
+    },
+    {
+      "id": "TKT-019",
+      "title": "Paginação quebrando ao usar filtros combinados",
+      "user": "anderson.melo@empresa.com",
+      "status": "in_progress",
+      "priority": "medium",
+      "created_at": "2025-04-04T16:30:00Z",
+      "updated_at": "2025-04-06T10:00:00Z",
+      "description": "Ao combinar dois ou mais filtros na listagem de pedidos (ex: status + período), a paginação para de funcionar corretamente. Ao avançar para a página 2, os resultados exibidos são os mesmos da página 1.",
+      "tags": [
+        "pagination",
+        "filter",
+        "orders"
+      ],
+      "assignee": "igor.santos@empresa.com"
+    },
+    {
+      "id": "TKT-020",
+      "title": "Aviso de cookie cobrindo botões no mobile",
+      "user": "larissa.matos@empresa.com",
+      "status": "resolved",
+      "priority": "low",
+      "created_at": "2025-03-05T08:00:00Z",
+      "updated_at": "2025-03-06T14:00:00Z",
+      "description": "O banner de aviso de cookies ocupa toda a parte inferior da tela em dispositivos móveis, cobrindo botões de ação importantes como 'Finalizar pedido' e 'Confirmar'. Usuários relatam não conseguir concluir compras pelo celular.",
+      "tags": [
+        "mobile",
+        "cookie",
+        "ui",
+        "ux"
+      ],
+      "assignee": "bruna.correia@empresa.com"
+    }
+  ],
+  "total": 20
+}
